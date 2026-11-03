@@ -1,0 +1,104 @@
+{
+  "name": "Harding",
+  "center_lat": 34.1405,
+  "center_lon": -118.28425,
+  "size": 2000.0,
+  "epsg": 6340,
+  "arcgis_wkid": 26911,
+  "utm_zone": 11,
+  "sw_e": 380594.21,
+  "sw_n": 3777479.33,
+  "y_offset": 120.0,
+  "club": "Harding Golf Course",
+  "lidar_survey": "CA_LosAngeles_1_B23",
+  "terrain_height": 227.0,
+  "gkd": {
+    "Location": "Griffith Park, Los Angeles, California, USA",
+    "CityTown": "Los Angeles",
+    "StateCountyProvince": "California",
+    "Country": "USA",
+    "Designer": "jboshers",
+    "altitudeV2": 445.0,
+    "altitude": 0.0,
+    "unitOfMeasure": 2,
+    "WindDirectionDefault": 225.0,
+    "WindStrengthDefault": 2,
+    "KeywordParkland": true,
+    "KeywordsString": "Parkland",
+    "CourseInfo": "Harding opened in August 1923 as Griffith Park's second municipal course, designed by George C. Thomas Jr. and named for President Warren G. Harding. Griffith Park hosted the Los Angeles Open from 1937 to 1939, and ten of Thomas's original holes remain today. A classic tree-lined parkland course set beneath the Griffith Park hills, in the heart of Los Angeles."
+  },
+  "display_name": "Harding Golf Course, Griffith Park",
+  "location": "Los Angeles, California, USA",
+  "designer_field": "jboshers",
+  "frame": {
+    "square_m": 2000.0,
+    "heightmap_px": 2049,
+    "crs": "EPSG:6340",
+    "sw_corner": [
+      380594.21,
+      3777479.33
+    ],
+    "centre_latlon": [
+      34.1405,
+      -118.28425
+    ],
+    "base_elevation_m": 120.0,
+    "relief_m": 227.0,
+    "axes": "x = m east of SW corner, z = m north, y = elevation - 120"
+  },
+  "lidar": {
+    "survey": "CA_LosAngeles_1_B23",
+    "quality_level": 1,
+    "pts_per_m2": 23.9
+  },
+  "satellite": {
+    "source": "NAIP",
+    "px": 4096,
+    "m_per_px": 0.49
+  },
+  "holes": 18,
+  "visit": "none",
+  "control_hole": null,
+  "paths": {
+    "toolkit": "../course-build",
+    "unity_project": "C:/GSP/Harding_Project",
+    "unity_scene": "Harding.unity",
+    "unity_editor_dir": "C:/GSP/Harding_Project/Assets/Editor",
+    "automation_output": "C:/GSP/Harding_Project/AutomationOutput",
+    "gspro_courses": "C:/GSProV1/Core/GSP/Courses",
+    "course_repo": ".",
+    "heightmap": "heightmap_2049.raw",
+    "gkd": "Harding.GKD",
+    "course_svg": "course.svg",
+    "satellite": "satellite.jpg",
+    "trees_csv": "trees.csv",
+    "signs": "progress/hole_signs.json",
+    "photos_root": "course_photos",
+    "progress": "progress",
+    "flyovers": "~/Documents/Harding/flyovers",
+    "backups": "~/Documents/Harding/Backups"
+  },
+  "gps": {
+    "magnetic_declination_deg": 12.0,
+    "note": "EXIF compass is magnetic; +12 deg to true in Los Angeles County (2026)"
+  },
+  "tee_slot_map": {
+    "Black": "Black",
+    "Blue": "Blue",
+    "White": "White",
+    "Combo": "Green",
+    "Yellow": "Yellow"
+  },
+  "shared_tee_box_exceptions": [],
+  "rule_overrides": {},
+  "notes": [
+    "course.json carries both coursekit's keys (size, sw_e, sw_n, y_offset, epsg, terrain_height, lidar_survey, gkd) and the toolkit's (frame, paths, lidar, holes, gps); keep both in step.",
+    "Frame is the Griffith Park frame shared with Wilson (same square, SW corner, y_offset). heightmap_2049.raw here is the shared heightmap levelled under the tee pads (tee_pads.csv); GKD tee heights match it.",
+    "satellite.jpg was copied from the griffith-park top level of the moorpark repo (shared with Wilson, 4096 px, 0.49 m/px).",
+    "Scripts that lived beside the course in griffith-park/ are in scripts/ (surrounds.py, smooth_fairways.py, fix_tees.py, fix_box_tees.py, tee_pads_harding.py, apply_checklist_harding.py); they were written to run from griffith-park/ with harding/ paths, so check paths before running.",
+    "Open question for BoJa: is the wooded knoll between 1, 17 and 18 OB (1.5 ha interior OB kept as a draft) or play it as it lies?",
+    "Card vs mapped-box mismatches to check: 16 Black, 14 White/Combo, 18 Combo/Yellow, 8 Blue, 12 Blue.",
+    "green_slopes.csv: flagged 4, 5, 8, 9, 11, 12, 13, 15, 16, 17, 18; steepest 11 (5.4%), 5 (4.5%), 13 (3.6%). Harding's old greens do tilt back to front; check in Unity before flattening.",
+    "Wilson next door is not in Harding's meshes; it shows as satellite-textured terrain. Flyover video: https://youtu.be/l-k2b8OmybI (hole 1 tee at 0:42)."
+  ]
+}
