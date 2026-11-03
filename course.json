@@ -76,7 +76,8 @@
     "photos_root": "course_photos",
     "progress": "progress",
     "flyovers": "~/Documents/Harding/flyovers",
-    "backups": "~/Documents/Harding/Backups"
+    "backups": "~/Documents/Harding/Backups",
+    "photo_store": "r2://harding"
   },
   "gps": {
     "magnetic_declination_deg": 12.0,
